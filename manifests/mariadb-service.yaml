@@ -1,0 +1,29 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"name":"mariadb","namespace":"default"},"spec":{"ports":[{"port":3306,"targetPort":3306}],"selector":{"app":"mariadb"},"type":"ClusterIP"}}
+  creationTimestamp: "2026-05-07T16:53:20Z"
+  name: mariadb
+  namespace: default
+  resourceVersion: "12812"
+  uid: bf99b5f9-0071-46c5-b7a7-48f1f5938143
+spec:
+  clusterIP: 10.43.104.139
+  clusterIPs:
+  - 10.43.104.139
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - port: 3306
+    protocol: TCP
+    targetPort: 3306
+  selector:
+    app: mariadb
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}
